@@ -24,6 +24,7 @@ Mollie Pettit is a Senior Data Visualization Engineer with Netflix. Utilizes Rea
 ---
 ## Schedule
 Date | Course Link
+--- | --- 
 Monday, Jan 27th | --- 
 Friday, Feb 7th | --- 
 Sunday, Feb 9th | --- 
