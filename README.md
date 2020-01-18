@@ -4,10 +4,6 @@
 
 **Course:** [MSIA 411: Data Visualization](https://www.mccormick.northwestern.edu/analytics/curriculum/descriptions/msia-411.html)
 
-**Dates:** 1/27, 2/7, 2/9
-
-**Time:** 
-
 **Instructor:** Mollie Pettit | [twitter](https://twitter.com/MollzMP) | [LinkedIn](https://www.linkedin.com/in/molliempettit/)
 
 **Contact:** Email: molliempettit@gmail.com.  **Note:** I will not typically be available for questions outside of class time. 
@@ -23,11 +19,11 @@ Mollie Pettit is a Senior Data Visualization Engineer with Netflix. Utilizes Rea
 
 ---
 ## Schedule
-Date | Course Link
---- | --- 
-Monday, Jan 27th | --- 
-Friday, Feb 7th | --- 
-Sunday, Feb 9th | --- 
+Date | Time | Topic
+--- | --- |---
+Monday, Jan 27th | 12:30-5:30 PM | ---
+Friday, Feb 7th | 12:30-5:30 PM | ---
+Sunday, Feb 9th | --- | ---
 
 
 For additional guidance working through these foundational skills, you can see the [resources page](). TKTK Add resources page
