@@ -19,7 +19,7 @@ Welcome to **Data Visualization with D3**! In this course, you'll learn how to l
 ---
 ## About the Instructor
 
-Mollie Pettit is a Senior Data Visualization Engineer with Netflix. Utilizes React, d3.js, human-centered design / design thinking. Previously worked as data viz freelancer (ACLU, G2, etc), d3.js instructor (Metis, Northwestern), and data scientist (Datascope Analytics). Shortlisted for Information is Beautiful Award in Humanitarian category, 2019. For fun: swing / blues / fusion dancing, bicycling. Misses Chicago immensely, but also thinks the bay area is pretty darn cool.
+Mollie Pettit is a Senior Data Visualization Engineer with Netflix. Utilizes React, d3.js, human-centered design / design thinking. Previously worked as data viz freelancer (ACLU, G2, etc), d3.js instructor (Metis, Northwestern), and data scientist (Datascope Analytics). Founding member and Events Director of the [Data Visualization Society](https://www.datavisualizationsociety.com/). Shortlisted for Information is Beautiful Award in Humanitarian category for [IllinoisTrafficStops.com](https://illinoistrafficstops.com/), 2019. For fun: swing / blues / fusion dancing, bicycling. Misses Chicago immensely, but also thinks the bay area is pretty darn cool.
 
 ---
 ## Schedule
