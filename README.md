@@ -30,4 +30,4 @@ Friday, Feb 7th | ---
 Sunday, Feb 9th | --- 
 
 
-For additional guidance working through these foundational skills, you can see the [resources page](resources.md).
+For additional guidance working through these foundational skills, you can see the [resources page](). TKTK Add resources page
