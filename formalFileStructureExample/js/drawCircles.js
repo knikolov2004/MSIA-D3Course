@@ -1,10 +1,8 @@
+// ***** Draw the circles *****
 function drawCircles(thisData) {
   const groups = svgScatter.selectAll(".ufoGroup").data(thisData, function(d) {
     return d.month;
   });
-
-  //   groups
-  //     .enter().append('g')
 
   const enterGroups = groups
     .enter()
@@ -21,15 +19,19 @@ function drawCircles(thisData) {
       );
     })
     .on("mouseenter", function(d) {
-      // define hover events
+      // ***** Define hover events *****
+
+      // set text associated with hovered circle to full opacity
       d3.select(this)
         .select("text")
         .transition()
         .duration(0)
         .style("opacity", 1);
 
+      // set all circles to half opacity
       d3.selectAll("circle").style("opacity", 0.5);
 
+      // increase radius of hovered circle and set to full opacity
       d3.select(this)
         .select("circle")
         .transition()
@@ -39,12 +41,15 @@ function drawCircles(thisData) {
         .style("opacity", 1);
     })
     .on("mouseleave", function(d) {
-      // define mouseleave events
+      // ***** define mouseleave events *****
+
+      // make all text transparent
       d3.select(this)
         .select("text")
         .transition()
         .style("opacity", 0);
 
+      // set circle back to original radius
       d3.select(this)
         .select("circle")
         .transition()
@@ -52,6 +57,7 @@ function drawCircles(thisData) {
         .duration(transitionTime)
         .attr("r", radius);
 
+      // make all circles fully opaque
       d3.selectAll("circle").style("opacity", 1);
     });
 
@@ -73,6 +79,7 @@ function drawCircles(thisData) {
     })
     .style("opacity", 0);
 
+  // merge existing and new circles
   groups
     .merge(groups)
     .transition()
@@ -88,5 +95,6 @@ function drawCircles(thisData) {
       );
     });
 
+  // remove old circles
   groups.exit().remove();
 }

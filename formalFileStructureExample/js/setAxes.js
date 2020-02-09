@@ -1,3 +1,4 @@
+// ***** set axes *****
 function setAxes() {
   xAxisScatter.scale(xScaleScatter);
 

@@ -1,3 +1,4 @@
+// ***** define variables *****
 const parseTime = d3.timeParse("%m/%Y");
 const marginScatter = { top: 20, right: 30, bottom: 20, left: 30 };
 const outerWidth = 700;
@@ -20,13 +21,9 @@ const svgScatter = SVG.append("g").attr(
 );
 
 const xScaleScatter = d3.scaleTime().range([0, innerWidth]);
-
 const xAxisScatter = d3.axisBottom(xScaleScatter).tickSize(-innerHeight);
-
 const yScaleScatter = d3.scaleLinear().range([innerHeight, 0]);
-
 const yAxisScatter = d3.axisLeft(yScaleScatter).tickSize(-innerWidth);
-
 const lineGenerator = d3.line().curve(d3.curveCardinal);
 
 const xAxisScatterGroup = svgScatter
@@ -40,6 +37,7 @@ const yAxisScatterGroup = svgScatter
   .attr("class", "y axis scatter") //gives group the classes 'y' and 'axis'
   .call(yAxisScatter);
 
+// ***** Read in data here, call ready function after data loaded *****
 d3.csv(
   "https://raw.githubusercontent.com/molliemarie/MSIA-D3Course-2019/master/Projects%26Exercises/generalUpdatePattern/data/ufo.csv",
   function(d) {
@@ -53,7 +51,9 @@ d3.csv(
   }
 ).then(ready);
 
+// ***** Ready Function *****
 function ready(fullData) {
+  // create list of years variable
   const yearList = d3
     .set(
       fullData.map(function(d) {
@@ -62,12 +62,14 @@ function ready(fullData) {
     )
     .values();
 
+  // filter to start data
   const startData = fullData.filter(function(d) {
     return d.year == startYear;
   });
 
-  console.log(startData);
+  // console.log(startData);
 
+  // create buttons
   d3.select("#buttonsDiv")
     .selectAll("button")
     .data(yearList)
@@ -80,10 +82,12 @@ function ready(fullData) {
       dataSwap(d, fullData);
     });
 
+  // set scales and axes
   setScales(startData, startYear);
 
   setAxes();
 
+  // create line
   lineGenerator
     .x(function(d) {
       return xScaleScatter(d.parsedDate);
@@ -91,11 +95,11 @@ function ready(fullData) {
     .y(function(d) {
       return yScaleScatter(d.count);
     });
-
   svgScatter
     .append("path")
     .attr("class", "ufoLine")
     .attr("d", lineGenerator(startData));
 
+  // draw circles
   drawCircles(startData);
 }
