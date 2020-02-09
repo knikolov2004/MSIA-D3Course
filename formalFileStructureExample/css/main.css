@@ -1,0 +1,49 @@
+svg {
+  border: 1px solid #f0f;
+}
+
+.axis.scatter line {
+  stroke-width: 1px;
+  stroke: #ccc;
+  stroke-dasharray: 2px 2px;
+}
+
+.axis text {
+  font-size: 12px;
+  fill: #777;
+}
+
+.axis.scatter path {
+  display: none;
+}
+
+.ufoGroup text {
+  fill: #aaa; /*grey out text*/
+  font-size: 11px;
+}
+
+.ufoCircle {
+  fill: limegreen;
+}
+
+.ufoLine {
+  fill: none;
+}
+
+.ufoLine {
+  /*removes black fill*/
+  fill: none;
+  /*styles line */
+  stroke: darkgray;
+  stroke-width: 3;
+}
+
+#scatterTitleText {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.tooltip {
+  font-size: 11px;
+  font-family: sans-serif;
+}
