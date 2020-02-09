@@ -1,9 +1,11 @@
-function setScales(thisData) {
-  xScaleScatter.domain(
-    d3.extent(thisData, function(d) {
-      return d.parsedDate;
-    })
-  );
+// let janDate;
+// let decDate;
+function setScales(thisData, dataYear) {
+  const janDate = new Date(dataYear, 0);
+  const decDate = new Date(dataYear, 11);
+  console.log(janDate, decDate);
+  xScaleScatter.domain([janDate, decDate]);
+  console.log(xScaleScatter.domain());
 
   yScaleScatter.domain([
     0,

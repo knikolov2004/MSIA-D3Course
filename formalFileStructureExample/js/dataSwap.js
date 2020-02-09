@@ -1,11 +1,11 @@
-function dataSwap(datasetGroup, fullData) {
-  const thisDataGroup = fullData.filter(function(d) {
-    return d.year == datasetGroup;
+function dataSwap(dataYear, fullData) {
+  const filteredData = fullData.filter(function(d) {
+    return d.year == dataYear;
   });
 
-  console.log(thisDataGroup);
+  console.log(dataYear);
 
-  setScales(thisDataGroup);
+  setScales(filteredData, dataYear);
 
   setAxes();
 
@@ -14,9 +14,9 @@ function dataSwap(datasetGroup, fullData) {
     .transition()
     .ease(d3.easeElastic) //if you use the same ease here as you do with the circles, the line and circles will move together.
     .duration(transitionTime)
-    .attr("d", lineGenerator(thisDataGroup));
+    .attr("d", lineGenerator(filteredData));
 
-  drawCircles(thisDataGroup);
+  drawCircles(filteredData);
 
-  d3.select("#scatterTitleText").text("UFO Sightings in " + datasetGroup);
+  d3.select("#scatterTitleText").text("UFO Sightings in " + dataYear);
 }

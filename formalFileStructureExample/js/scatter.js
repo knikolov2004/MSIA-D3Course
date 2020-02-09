@@ -6,6 +6,7 @@ const innerWidth = outerWidth - marginScatter.left - marginScatter.right;
 const innerHeight = outerHeight - marginScatter.top - marginScatter.bottom;
 const transitionTime = 1000;
 const radius = 10;
+const startYear = 2018;
 
 const SVG = d3
   .select("#scatterChart")
@@ -62,7 +63,7 @@ function ready(fullData) {
     .values();
 
   const startData = fullData.filter(function(d) {
-    return d.year == 2018;
+    return d.year == startYear;
   });
 
   console.log(startData);
@@ -79,7 +80,7 @@ function ready(fullData) {
       dataSwap(d, fullData);
     });
 
-  setScales(startData);
+  setScales(startData, startYear);
 
   setAxes();
 
